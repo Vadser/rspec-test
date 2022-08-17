@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @transaction.name %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @transaction.to %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @transaction.amount %>
+</p>
+
+<p>
+  <strong>Currency:</strong>
+  <%= @transaction.currency %>
+</p>
+
+<p>
+  <strong>Converted amount:</strong>
+  <%= @transaction.converted_amount %>
+</p>
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %> |
+<%= link_to 'Convert', convert_transaction_path(@transaction), method: :post %>
